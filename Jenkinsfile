@@ -1,10 +1,6 @@
 
 pipeline {
     agent any
-
-    tools{
-        kubernetes
-    }
     stages {
         stage('Hello') {
             steps {
