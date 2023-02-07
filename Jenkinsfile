@@ -90,11 +90,11 @@ pipeline {
         }
     }
     stages {
-        stage('Checkout Code') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitlogin', url: 'https://github.com/jozsoka2222/jenkins-tan-projekt.git']]])
-            }
-        }
+        // stage('Checkout Code') {
+        //     steps {
+        //         checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitlogin', url: 'https://github.com/jozsoka2222/jenkins-tan-projekt.git']]])
+        //     }
+        // }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t jenkins-conatiner -f Dockerfile .'
